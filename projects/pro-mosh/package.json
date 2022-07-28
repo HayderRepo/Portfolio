@@ -1,0 +1,23 @@
+{
+  "name": "pro-website-with-mosh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haiderprogramming10/pro-website-with-mosh.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haiderprogramming10/pro-website-with-mosh/issues"
+  },
+  "homepage": "https://github.com/haiderprogramming10/pro-website-with-mosh#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
