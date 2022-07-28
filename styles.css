@@ -320,11 +320,19 @@ address > a {
     width: 25em;
   }
   .logo {
-    font-size: 1em;
+    font-size: 2.5em;
+  }
+  .footer-icon{
+    font-size: 30px;
+    
+    
+  }
+  .footer{
+    white-space: nowrap;
   }
   nav a {
     padding: 0 5px;
-    font-size: 5px;
+    font-size: 25px;
   }
 
   .hamburger {
