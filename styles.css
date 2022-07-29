@@ -307,6 +307,15 @@ address > a {
   body {
     font-size: 12px;
   }
+  .project-card {
+  background-color: #fff;
+  border: 1px solid #fff;
+  min-height: 14em;
+  width: 35em;
+ 
+  margin: 20px;
+
+}
   .main-2 {
     padding: 20px;
   }
@@ -315,6 +324,9 @@ address > a {
   }
   section {
     padding: 0;
+  }
+  .project-card{
+   
   }
   .card {
     width: 25em;
@@ -325,6 +337,10 @@ address > a {
   .footer-icon{
     font-size: 30px;
     
+    
+  }
+  .footer-title ,.footer-title span{
+    font-size: 10px;
     
   }
   .footer{
