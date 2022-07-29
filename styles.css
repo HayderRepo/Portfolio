@@ -80,7 +80,7 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url(images/background.jpg);
+  background: url(images-webp/background.webp);
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -316,6 +316,7 @@ address > a {
   margin: 20px;
 
 }
+
   .main-2 {
     padding: 20px;
   }
@@ -392,6 +393,13 @@ address > a {
   body {
     font-size: 10px;
   }
+  .main {
+  background: url(images-webp/background-mobile.webp);
+  background-repeat: no-repeat;
+  
+  background-attachment: fixed;
+  position: relative;
+}
   nav a {
     font-size: 5px;
   }
