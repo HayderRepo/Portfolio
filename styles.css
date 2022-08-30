@@ -7,6 +7,10 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+.number,.email{
+  text-decoration: none;
+  color: #000016;
+}
 
 header {
   background-color: #f0f0f0;
@@ -41,6 +45,7 @@ header {
   text-transform: capitalize;
   color: dodgerblue;
   white-space: nowrap;
+  font-size: 1.2rem;
 }
 .hamburger {
   display: none;
@@ -62,6 +67,7 @@ nav a:hover {
 }
 nav {
   display: flex;
+ 
 }
 /* @media only screen and (max-width:900px) {
     nav a{
@@ -87,6 +93,14 @@ section {
   background-position: center;
   text-transform: capitalize;
   background-position-y: top;
+}
+@media (max-width: 400px) {
+  .main {
+    max-width: 400px;
+  }
+  .main-2 {
+    left: 120px;
+  }
 }
 .main-2 {
   position: absolute;
@@ -149,6 +163,15 @@ section {
   font-size: 2.2em;
   margin-bottom: 30px;
 }
+.title-2 {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(204, 212, 220);
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
 
 .card {
   width: 23em;
@@ -198,6 +221,7 @@ section {
   margin: 20px;
   transition: 0.7s ease;
   overflow: hidden;
+  scale: (0.8);
 }
 .project-card:hover {
   transform: scale(1.1);
@@ -215,7 +239,7 @@ section {
 }
 .project-category {
   font-size: 0.8em;
-  color: #000;
+  color:black;
 }
 .project-title {
   display: flex;
@@ -224,11 +248,11 @@ section {
   font-weight: 800;
   margin-top: 10px;
 }
-.more-details {
+.view-btn {
   text-decoration: none;
   color: dodgerblue;
 }
-.more-details:hover {
+.view-btn:hover {
   color: #601cfc;
 }
 
@@ -292,7 +316,7 @@ address > a {
     padding: 80px 20px;
   }
   .logo {
-    font-size: 1.2px;
+    font-size: 1.6rem;
   }
   .main-content h2 {
     font-size: 1.6em;
@@ -308,14 +332,20 @@ address > a {
     font-size: 12px;
   }
   .project-card {
-  background-color: #fff;
-  border: 1px solid #fff;
-  min-height: 14em;
-  width: 30em;
- 
-  margin: 20px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    min-height: 14em;
+    width: 30em;
 
-}
+    margin: 20px;
+  }
+
+  @media (max-width: 500px) {
+    header {
+    padding: 0px 30px;
+    width: 100%;
+  }
+  }
 
   .main-2 {
     padding: 20px;
@@ -326,30 +356,26 @@ address > a {
   section {
     padding: 0;
   }
-  .project-card{
-   
-  }
+
   .card {
     width: 25em;
   }
   .logo {
     font-size: 2.5em;
   }
-  .footer-icon{
+  .footer-icon {
     font-size: 30px;
-    
-    
   }
-  .footer-title ,.footer-title span{
+  .footer-title,
+  .footer-title span {
     font-size: 10px;
-    
   }
-  .footer{
+  .footer {
     white-space: nowrap;
   }
   nav a {
     padding: 0 5px;
-    font-size: 25px;
+    font-size: 1.5rem;
   }
 
   .hamburger {
@@ -376,9 +402,14 @@ address > a {
   }
   .nav-item {
     margin: 16px 0;
+    
+  }
+  .nav-link{
+    font-size: 1.3rem;
   }
   .nav-menu.active {
     left: 0;
+    
   }
   .footer .social-icons a {
     font-size: 0.5em;
@@ -394,16 +425,30 @@ address > a {
     font-size: 10px;
   }
   .main {
-  background: url(images-webp/background-mobile.webp);
-  background-repeat: no-repeat;
-  
-  background-attachment: fixed;
-  position: relative;
-}
+    background: url(images-webp/background-mobile.webp);
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+    position: relative;
+  }
   nav a {
     font-size: 5px;
   }
-  .info p {
+  .info a {
     font-size: 10px;
+    
   }
+}
+.links-container{
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+.code-link{
+    text-decoration: none;
+  color: rgb(96, 96, 96);
+  transition: all 0.3s;
+}
+.code-link:hover{
+  color: rgb(0, 0, 0);;
 }

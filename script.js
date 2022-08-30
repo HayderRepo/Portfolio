@@ -13,3 +13,4 @@ document.querySelectorAll(".nav-link").forEach(
     navMenu.classList.remove("active");
   }
 ));
+
