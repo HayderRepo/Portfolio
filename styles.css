@@ -7,10 +7,14 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-.number,.email{
+
+.number,
+.email {
   text-decoration: none;
   color: #000016;
 }
+
+
 
 header {
   background-color: #f0f0f0;
@@ -67,7 +71,6 @@ nav a:hover {
 }
 nav {
   display: flex;
- 
 }
 /* @media only screen and (max-width:900px) {
     nav a{
@@ -79,33 +82,47 @@ nav {
 section {
   padding: 100px;
 }
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+ 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 .main {
   color: rgb(255, 255, 255);
   width: 100%;
   min-height: 100vh;
-  display: flex;
+    
   align-items: center;
-  background: url(images-webp/background.webp);
+  background: #000016;
+  
+
+
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-  background-position: center;
   text-transform: capitalize;
-  background-position-y: top;
 }
-@media (max-width: 400px) {
-  .main {
-    max-width: 400px;
-  }
-  .main-2 {
-    left: 120px;
-  }
+.main-2{
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  justify-content: center;
+  padding-top: 20%;
+  
+
 }
-.main-2 {
-  position: absolute;
-  right: 70px;
-}
+
+
+
 /* @media screen and (min-width:600px) {
     .main_2{
         display: flex;
@@ -140,6 +157,7 @@ section {
   font-weight: 600;
   display: inline-block;
   transition: 0.3s ease;
+  width: 13em;
 }
 .main-btn:hover {
   background: rgb(0, 79, 159);
@@ -171,6 +189,8 @@ section {
   color: rgb(204, 212, 220);
   font-size: 1.5em;
   margin-bottom: 30px;
+  background: #f0f0f043;
+  border-radius: 12px;
 }
 
 .card {
@@ -205,7 +225,12 @@ section {
 }
 
 .projects {
-  background-color: #000016;
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+  
+  background: black;
 }
 .projects.content {
   margin-top: 30px;
@@ -238,8 +263,11 @@ section {
   min-width: 200px;
 }
 .project-category {
-  font-size: 0.8em;
-  color:black;
+  font-size: 1.1em;
+  color: black;
+}
+.projcet-method {
+  color: rgb(0, 149, 125);
 }
 .project-title {
   display: flex;
@@ -284,11 +312,12 @@ address > a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 100px;
 }
 
 .footer-title {
-  font-size: 1.3em;
-  font-weight: 600;
+  font-size: 0.8em;
+  font-weight: 300;
 }
 .footer-title span {
   color: dodgerblue;
@@ -305,6 +334,9 @@ address > a {
 @media (max-width: 1023px) {
   header {
     padding: 12px 20px;
+  }
+  .column{
+    width: 100%;
   }
   .nav a {
     padding-left: 1px;
@@ -327,6 +359,44 @@ address > a {
   }
 }
 
+ 
+  nav a {
+    font-size: 5px;
+  }
+  .info a {
+    font-size: 10px;
+  }
+
+.links-container {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+.code-link {
+  text-decoration: none;
+  color: rgb(96, 96, 96);
+  transition: all 0.3s;
+}
+.code-link:hover {
+  color: rgb(0, 0, 0);
+}
+
+.my-img {
+  width: 400px;
+  border-radius: 200px;
+  border: dodgerblue solid 2px;
+}
+@media only screen and (max-width: 400px){
+.my-img{
+  width: 200px;
+  margin: 5em;
+}
+
+}
+
+
+
+
 @media (max-width: 642px) {
   body {
     font-size: 12px;
@@ -335,16 +405,39 @@ address > a {
     background-color: #fff;
     border: 1px solid #fff;
     min-height: 14em;
-    width: 30em;
+    
 
     margin: 20px;
   }
 
   @media (max-width: 500px) {
     header {
-    padding: 0px 30px;
-    width: 100%;
-  }
+      padding: 0px 30px;
+      width: 100%;
+    }
+    .footer{
+       padding: 0 ;
+    }
+    .title-2{
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    }
+   
+    .project-card{
+      
+    }
+    .footer-title{
+  font-size: 0.4em;
+  
+}
+
+
+.footer-icon{
+
+}
+
+  
   }
 
   .main-2 {
@@ -364,12 +457,9 @@ address > a {
     font-size: 2.5em;
   }
   .footer-icon {
-    font-size: 30px;
-  }
-  .footer-title,
-  .footer-title span {
     font-size: 10px;
   }
+
   .footer {
     white-space: nowrap;
   }
@@ -402,53 +492,20 @@ address > a {
   }
   .nav-item {
     margin: 16px 0;
-    
   }
-  .nav-link{
+  .nav-link {
     font-size: 1.3rem;
   }
   .nav-menu.active {
     left: 0;
-    
   }
   .footer .social-icons a {
     font-size: 0.5em;
   }
 }
-@media (max-width: 500px) {
-  .navigation {
-    display: none;
-  }
-}
+
 @media (max-width: 300px) {
   body {
     font-size: 10px;
   }
-  .main {
-    background: url(images-webp/background-mobile.webp);
-    background-repeat: no-repeat;
-
-    background-attachment: fixed;
-    position: relative;
-  }
-  nav a {
-    font-size: 5px;
-  }
-  .info a {
-    font-size: 10px;
-    
-  }
-}
-.links-container{
-  display: flex;
-  justify-content: space-around;
-  width: 50%;
-}
-.code-link{
-    text-decoration: none;
-  color: rgb(96, 96, 96);
-  transition: all 0.3s;
-}
-.code-link:hover{
-  color: rgb(0, 0, 0);;
 }

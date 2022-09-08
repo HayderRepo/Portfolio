@@ -153,5 +153,3 @@ function displayMenuItems(menuItems){
 };
 
 
-
-
