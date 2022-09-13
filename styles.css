@@ -738,9 +738,9 @@ make it thinner, then set it to again wrap around the entire parent element.
 .btn-hover.color-1 {
   background-image: linear-gradient(
     to right,
-    #29323c,
-    #485563,
-    #2b5876,
+    dodgerblue,
+    rgba(0, 123, 255, 0.515),
+    rgb(102, 201, 82),
     #4e4376
   );
   box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
