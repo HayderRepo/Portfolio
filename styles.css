@@ -297,7 +297,7 @@ nav {
 /* About me section */
 
 .cards__container {
-  height: 100vh;
+  /* height: 100vh; */
 }
 .card__header {
   display: flex;
@@ -318,7 +318,7 @@ nav {
   margin-bottom: 30px;
   text-transform: uppercase;
 }
-.project-using-title {
+.project__category{
   display: flex;
   justify-content: center;
   text-transform: uppercase;
@@ -382,7 +382,7 @@ nav {
   display: flex;
 }
 
-.projects {
+.projects__container {
   width: 100%;
   height: 100%;
 
@@ -390,15 +390,15 @@ nav {
 
   background: black;
 }
-.projects.content {
+.projects__container.content {
   margin-top: 30px;
 }
 
-.project-card {
+.card--secondary {
   background-color: #fff;
   border: 1px solid #fff;
   min-height: 14em;
-  width: 23em;
+  width: 22em;
   overflow: hidden;
   border-radius: 10px;
   margin: 20px;
@@ -406,22 +406,22 @@ nav {
   overflow: hidden;
   scale: (0.8);
 }
-.project-card:hover {
+.card--secondary:hover {
   transform: scale(1.1);
 }
-.projet-image img {
+.project__image img {
   width: 100%;
 }
 
-.project-card:hover .projet-image {
+.card--secondary:hover .project__image {
   opacity: 0.8;
 }
 
-.project-category {
+.project__category {
   font-size: 1.1em;
   color: black;
 }
-.projcet-method {
+.projcet__methods {
   color: rgb(0, 0, 0);
   margin-top: 5px;
   font-size: 1em;
@@ -442,7 +442,7 @@ nav {
   margin: 1rem;
   margin-top: 0.5rem;
 }
-.projects-details {
+.project__details{
   margin: 0.6em 1em;
 }
 
@@ -561,12 +561,13 @@ address > a {
   .links-container {
     padding: 0 2em;
   }
-  .project-card {
+  .card--secondary {
     background-color: #fff;
     border: 1px solid #fff;
     min-height: 14em;
 
     margin: 20px;
+    
   }
 
   @media (max-width: 500px) {
