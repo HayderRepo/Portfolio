@@ -9,8 +9,9 @@
 }
 /* sections */
 section {
-  padding: 100px;
+  padding: 10%;
 }
+
 .section-title {
   font-size: 2.2em;
   display: flex;
@@ -83,25 +84,23 @@ header {
 
 /* NavBar */
 
-.nav-men {
+.nav-menu {
   display: flex;
   flex-direction: row;
-}
-.nav-item {
-  list-style: none;
-}
-.nav-bar ul {
   list-style: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
+.nav-item {
+  list-style: none;
+}
 
-.nav-bar li {
+.nav-item {
   float: left;
 }
 
-.nav-bar li a {
+.nav-link {
   position: relative;
   display: block;
   color: dodgerblue;
@@ -165,6 +164,19 @@ nav {
   }
 }
 @media (max-width: 500px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 50px;
+    flex-direction: column;
+    background-color: #000016;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
   nav a {
     padding: 0 5px;
     font-size: 1.5rem;
@@ -181,24 +193,11 @@ nav {
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-  .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 50px;
-    flex-direction: column;
-    background-color: #000016;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-  }
   .nav-item {
     margin: 16px 0;
   }
   .nav-link {
     font-size: 1.3rem;
-  }
-  .nav-menu.active {
-    left: 0;
   }
 }
 
@@ -216,7 +215,33 @@ nav {
   background-attachment: fixed;
   position: relative;
   text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
 }
+@media(max-width:800px){
+  .main{
+    flex-direction: column;
+
+  }
+}
+.main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+@media (max-width: 500px) {
+  .column {
+    width: 70%;
+    padding: 30px;
+    margin: 20px;
+  }
+}
+/* Clear floats after the columns */
 
 .main-p {
   display: flex;
@@ -260,19 +285,6 @@ nav {
   transform: scale(1.1);
 }
 
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* social-icons */
 .social-icons {
   margin: 20px;
@@ -281,6 +293,13 @@ nav {
   color: white;
   font-size: 1.7em;
   padding-right: 30px;
+}
+
+@media (max-width: 500px) {
+  .social-icons {
+    margin: 10px;
+    display: flex;
+  }
 }
 /* end of main section */
 
@@ -305,14 +324,20 @@ nav {
   background: #f0f0f043;
   border-radius: 12px;
 }
+.about-cards-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .cards {
   height: 100vh;
 }
 .about-card {
-  width: 23em;
+  width: 20em;
   border-radius: 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   flex-direction: column;
   padding: 20px 30px;
@@ -468,9 +493,6 @@ address > a {
   .titile {
     font-size: 1.8em;
   }
-  .section {
-    padding: 80px 20px;
-  }
 
   .main-content h2 {
     font-size: 1.6em;
@@ -492,65 +514,6 @@ address > a {
   align-items: center;
   padding-left: 7em;
 }
-.code-link {
-  /* text-decoration: none;
-  color: rgb(96, 96, 96);
-  transition: all 0.3s; */
-  --c: goldenrod;
-  color: var(--c);
-  font-size: 16px;
-  border: 0.3em solid var(--c);
-  border-radius: 0.5em;
-  width: 12em;
-  height: 3em;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: sans-serif;
-  letter-spacing: 0.1em;
-  text-align: center;
-  line-height: 3em;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  transition: 0.5s;
-  text-decoration: none;
-}
-.code-link span {
-  position: absolute;
-  width: 15%;
-  height: 100%;
-  background-color: var(--c);
-  transform: translateY(150%);
-  border-radius: 50%;
-  left: calc((var(--n) - 1) * 25%);
-  transition: 0.5s;
-  transition-delay: calc((var(--n) - 1) * 0.1s);
-  z-index: -1;
-}
-.code-link:hover {
-  /* color: rgb(0, 0, 0); */
-
-  color: black;
-}
-.code-link:hover span {
-  transform: translateY(0) scale(2);
-}
-
-.code-link span:nth-child(1) {
-  --n: 1;
-}
-
-.code-link span:nth-child(2) {
-  --n: 2;
-}
-
-.code-link span:nth-child(3) {
-  --n: 3;
-}
-
-.code-link span:nth-child(4) {
-  --n: 4;
-}
 
 .my-img {
   width: 400px;
@@ -560,7 +523,18 @@ address > a {
 @media only screen and (max-width: 400px) {
   .my-img {
     width: 200px;
-    margin: 5em;
+    border-radius: 100px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .my-img {
+    width: 250px;
+    border: 125px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .my-img {
+    width: 150px;
   }
 }
 
@@ -602,7 +576,7 @@ address > a {
   }
 
   .about-card {
-    width: 25em;
+    width: 20em;
   }
 
   .footer-icon {
