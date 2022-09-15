@@ -12,16 +12,7 @@ section {
   padding: 10%;
 }
 
-.section-title {
-  font-size: 2.2em;
-  display: flex;
-  justify-content: center;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: dodgerblue;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-}
+
 
 .number,
 .email {
@@ -304,7 +295,11 @@ nav {
 /* end of main section */
 
 /* About me section */
-.card-title {
+
+.cards__container {
+  height: 100vh;
+}
+.card__header {
   display: flex;
   justify-content: center;
   text-transform: uppercase;
@@ -312,6 +307,16 @@ nav {
   color: dodgerblue;
   font-size: 1.8em;
   margin-bottom: 30px;
+}
+.section-title {
+  font-size: 2.2em;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: dodgerblue;
+  margin-bottom: 30px;
+  text-transform: uppercase;
 }
 .project-using-title {
   display: flex;
@@ -324,15 +329,18 @@ nav {
   background: #f0f0f043;
   border-radius: 12px;
 }
-.about-cards-container{
+.container{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.cards {
-  height: 100vh;
+@media (max-width:900px){
+  .container{
+    flex-direction: column;
+  }
 }
-.about-card {
+
+.card--primary {
   width: 20em;
   border-radius: 20px;
   display: flex;
@@ -346,13 +354,23 @@ nav {
   box-shadow: 0 5px 25px rgba(1, 1, 1, 20%);
 }
 
-.about-card .icon {
+.card--primary .icon {
   font-size: 150px;
   color: dodgerblue;
 }
 
-.about-card:hover {
+
+.card--primary:hover {
   transform: scale(1.05);
+}
+.card__body a {
+  font-size: 10px;
+}
+
+@media (max-width:500px){
+  .card--primary {
+    width: 20em;
+  }
 }
 .content {
   display: flex;
@@ -447,7 +465,7 @@ nav {
   font-size: 4.5em;
 }
 
-.contact .info h3 {
+.contact .card__body h3 {
   display: flex;
 
   justify-content: center;
@@ -503,9 +521,7 @@ address > a {
   }
 }
 
-.info a {
-  font-size: 10px;
-}
+
 
 .links-container {
   display: flex;
@@ -575,9 +591,7 @@ address > a {
     font-size: 1.4em;
   }
 
-  .about-card {
-    width: 20em;
-  }
+  
 
   .footer-icon {
     font-size: 10px;
