@@ -285,6 +285,12 @@ nav {
   font-size: 1.7em;
   padding-right: 30px;
 }
+.social-icons i{
+ transition: 0.3s all ease-in-out;
+}
+.social-icons i:hover{
+  transform: scale(1.2);
+}
 
 @media (max-width: 500px) {
   .social-icons {
@@ -329,6 +335,12 @@ nav {
   background: #f0f0f043;
   border-radius: 12px;
 }
+.project__type{
+  text-transform: uppercase;
+  font-weight: 500;
+  white-space: nowrap;
+  font-size: 0.8em;
+}
 .container{
   display: flex;
   justify-content: center;
@@ -349,7 +361,7 @@ nav {
 
   flex-direction: column;
   padding: 20px 30px;
-  transition: all 0.3s;
+  transition:0.3 all ease-in;
   margin: 30px;
   box-shadow: 0 5px 25px rgba(1, 1, 1, 20%);
 }
@@ -439,7 +451,7 @@ nav {
 }
 .project-title {
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 620;
   white-space: nowrap;
   font-size: 1.1em;
 }
