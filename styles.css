@@ -19,6 +19,9 @@ section {
   text-decoration: none;
   color: #000016;
 }
+.number p{
+  font-size: 15px;
+}
 
 /* Header */
 
@@ -502,7 +505,6 @@ address > a {
 .footer {
   background-color: #000016;
   color: #fff;
-  padding: 0 2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -594,7 +596,7 @@ address > a {
 
   @media (max-width: 500px) {
     .footer {
-      padding: 0;
+      padding: 0 20px;
     }
     .title-2 {
       width: 80%;
@@ -603,7 +605,7 @@ address > a {
     }
 
     .footer-title {
-      font-size: 0.4em;
+      font-size: 0.8em;
     }
   }
 
@@ -617,7 +619,7 @@ address > a {
   
 
   .footer-icon {
-    font-size: 10px;
+    font-size: 20px;
   }
 
   .footer {
