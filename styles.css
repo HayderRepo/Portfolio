@@ -356,7 +356,7 @@ nav {
 }
 
 .card--primary {
-  width: 20em;
+  width: 18em;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -365,8 +365,9 @@ nav {
   flex-direction: column;
   padding: 20px 30px;
   transition:0.3 all ease-in;
-  margin: 30px;
+  margin: 20px;
   box-shadow: 0 5px 25px rgba(1, 1, 1, 20%);
+  
 }
 @media (max-width:350px){
 
@@ -423,13 +424,13 @@ nav {
   background-color: #fff;
   border: 1px solid #fff;
   min-height: 14em;
-  width: 22em;
+  width: 19em;
   overflow: hidden;
   border-radius: 10px;
-  margin: 20px;
+  margin: 30px 10px;
   transition: 0.7s ease;
   overflow: hidden;
-  scale: (0.8);
+  
 }
 .card--secondary:hover {
   transform: scale(1.1);
@@ -461,7 +462,7 @@ nav {
 .title-container {
   display: flex;
   justify-content: space-between;
-  justify-content: center;
+  
   align-items: center;
   text-align: center;
   margin: 1rem;
@@ -550,9 +551,12 @@ address > a {
 .links-container {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  
+  /* width: 70%; */
   align-items: center;
-  padding-left: 7em;
+  /* padding-left: 7em; */
+  width: 40%;
+  
 }
 
 .my-img {
@@ -583,7 +587,8 @@ address > a {
     font-size: 12px;
   }
   .links-container {
-    padding: 0 2em;
+    /* padding: 0 2em;   */
+    width: 50%;
   }
   .card--secondary {
     background-color: #fff;
